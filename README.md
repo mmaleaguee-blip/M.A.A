@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>MAA League</title>
 
 <style>
@@ -16,67 +16,91 @@ body{
   background:#0e1217;
   color:#fff;
 }
+
+/* HEADER */
 header{
   text-align:center;
-  padding:15px;
+  padding:14px;
   background:#111827;
-  font-size:22px;
+  font-size:20px;
   font-weight:bold;
 }
+
+/* TABS */
 .tabs{
   display:flex;
-  justify-content:center;
-  gap:12px;
-  padding:10px;
   background:#0b1220;
 }
 .tabs button{
-  padding:8px 20px;
+  flex:1;
+  padding:12px 0;
   border:none;
-  border-radius:20px;
-  background:#1f2933;
-  color:#fff;
+  background:none;
+  color:#9ca3af;
+  font-size:15px;
   cursor:pointer;
-  font-size:14px;
 }
 .tabs button.active{
-  background:#38bdf8;
-  color:#000;
+  color:#38bdf8;
+  border-bottom:3px solid #38bdf8;
 }
+
+/* CONTENT */
 .container{
-  padding:15px;
+  padding:12px;
 }
+
+/* ROUNDS */
 .round{
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 .round h3{
-  color:#38bdf8;
+  font-size:15px;
   margin-bottom:8px;
+  color:#38bdf8;
 }
+
+/* MATCH CARD */
 .match{
+  background:#111827;
+  border-radius:10px;
+  padding:12px;
+  margin-bottom:8px;
   display:flex;
   justify-content:space-between;
-  padding:8px 10px;
-  background:#0e1625;
-  border-radius:6px;
-  margin-bottom:6px;
+  align-items:center;
   font-size:14px;
 }
+.match span{
+  width:40%;
+  text-align:center;
+}
+.match span:nth-child(2){
+  width:20%;
+  color:#9ca3af;
+}
+
+/* STANDINGS */
 table{
   width:100%;
   border-collapse:collapse;
   font-size:14px;
 }
 th, td{
-  padding:10px;
+  padding:10px 6px;
   text-align:center;
 }
 th{
+  background:#111827;
+  color:#9ca3af;
+}
+tr{
   background:#0e1625;
 }
-tr:nth-child(even){
-  background:#0e1625;
+tr:not(:last-child){
+  border-bottom:1px solid #1f2933;
 }
+
 .hidden{
   display:none;
 }
@@ -99,83 +123,83 @@ tr:nth-child(even){
 
 <div class="round">
 <h3>Round 1</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>marwan</span></div>
-<div class="match"><span>ahmedzlatan</span><span>vs</span><span>swra</span></div>
-<div class="match"><span>meer</span><span>vs</span><span>kaka</span></div>
-<div class="match"><span>azhdar</span><span>vs</span><span>esmahil</span></div>
-<div class="match"><span>humar</span><span>vs</span><span>hamastar</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>marwan</span></div>
+<div class="match"><span>ahmedzlatan</span><span>VS</span><span>swra</span></div>
+<div class="match"><span>meer</span><span>VS</span><span>kaka</span></div>
+<div class="match"><span>azhdar</span><span>VS</span><span>esmahil</span></div>
+<div class="match"><span>humar</span><span>VS</span><span>hamastar</span></div>
 </div>
 
 <div class="round">
 <h3>Round 2</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>ahmedzlatan</span></div>
-<div class="match"><span>meer</span><span>vs</span><span>marwan</span></div>
-<div class="match"><span>azhdar</span><span>vs</span><span>swra</span></div>
-<div class="match"><span>humar</span><span>vs</span><span>kaka</span></div>
-<div class="match"><span>hamastar</span><span>vs</span><span>esmahil</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>ahmedzlatan</span></div>
+<div class="match"><span>meer</span><span>VS</span><span>marwan</span></div>
+<div class="match"><span>azhdar</span><span>VS</span><span>swra</span></div>
+<div class="match"><span>humar</span><span>VS</span><span>kaka</span></div>
+<div class="match"><span>hamastar</span><span>VS</span><span>esmahil</span></div>
 </div>
 
 <div class="round">
 <h3>Round 3</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>swra</span></div>
-<div class="match"><span>marwan</span><span>vs</span><span>kaka</span></div>
-<div class="match"><span>ahmedzlatan</span><span>vs</span><span>esmahil</span></div>
-<div class="match"><span>meer</span><span>vs</span><span>hamastar</span></div>
-<div class="match"><span>azhdar</span><span>vs</span><span>humar</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>swra</span></div>
+<div class="match"><span>marwan</span><span>VS</span><span>kaka</span></div>
+<div class="match"><span>ahmedzlatan</span><span>VS</span><span>esmahil</span></div>
+<div class="match"><span>meer</span><span>VS</span><span>hamastar</span></div>
+<div class="match"><span>azhdar</span><span>VS</span><span>humar</span></div>
 </div>
 
 <div class="round">
 <h3>Round 4</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>kaka</span></div>
-<div class="match"><span>swra</span><span>vs</span><span>esmahil</span></div>
-<div class="match"><span>marwan</span><span>vs</span><span>hamastar</span></div>
-<div class="match"><span>ahmedzlatan</span><span>vs</span><span>humar</span></div>
-<div class="match"><span>meer</span><span>vs</span><span>azhdar</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>kaka</span></div>
+<div class="match"><span>swra</span><span>VS</span><span>esmahil</span></div>
+<div class="match"><span>marwan</span><span>VS</span><span>hamastar</span></div>
+<div class="match"><span>ahmedzlatan</span><span>VS</span><span>humar</span></div>
+<div class="match"><span>meer</span><span>VS</span><span>azhdar</span></div>
 </div>
 
 <div class="round">
 <h3>Round 5</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>esmahil</span></div>
-<div class="match"><span>kaka</span><span>vs</span><span>hamastar</span></div>
-<div class="match"><span>swra</span><span>vs</span><span>humar</span></div>
-<div class="match"><span>marwan</span><span>vs</span><span>azhdar</span></div>
-<div class="match"><span>ahmedzlatan</span><span>vs</span><span>meer</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>esmahil</span></div>
+<div class="match"><span>kaka</span><span>VS</span><span>hamastar</span></div>
+<div class="match"><span>swra</span><span>VS</span><span>humar</span></div>
+<div class="match"><span>marwan</span><span>VS</span><span>azhdar</span></div>
+<div class="match"><span>ahmedzlatan</span><span>VS</span><span>meer</span></div>
 </div>
 
 <div class="round">
 <h3>Round 6</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>hamastar</span></div>
-<div class="match"><span>esmahil</span><span>vs</span><span>humar</span></div>
-<div class="match"><span>kaka</span><span>vs</span><span>azhdar</span></div>
-<div class="match"><span>swra</span><span>vs</span><span>meer</span></div>
-<div class="match"><span>marwan</span><span>vs</span><span>ahmedzlatan</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>hamastar</span></div>
+<div class="match"><span>esmahil</span><span>VS</span><span>humar</span></div>
+<div class="match"><span>kaka</span><span>VS</span><span>azhdar</span></div>
+<div class="match"><span>swra</span><span>VS</span><span>meer</span></div>
+<div class="match"><span>marwan</span><span>VS</span><span>ahmedzlatan</span></div>
 </div>
 
 <div class="round">
 <h3>Round 7</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>humar</span></div>
-<div class="match"><span>hamastar</span><span>vs</span><span>azhdar</span></div>
-<div class="match"><span>esmahil</span><span>vs</span><span>meer</span></div>
-<div class="match"><span>kaka</span><span>vs</span><span>ahmedzlatan</span></div>
-<div class="match"><span>swra</span><span>vs</span><span>marwan</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>humar</span></div>
+<div class="match"><span>hamastar</span><span>VS</span><span>azhdar</span></div>
+<div class="match"><span>esmahil</span><span>VS</span><span>meer</span></div>
+<div class="match"><span>kaka</span><span>VS</span><span>ahmedzlatan</span></div>
+<div class="match"><span>swra</span><span>VS</span><span>marwan</span></div>
 </div>
 
 <div class="round">
 <h3>Round 8</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>azhdar</span></div>
-<div class="match"><span>humar</span><span>vs</span><span>meer</span></div>
-<div class="match"><span>hamastar</span><span>vs</span><span>ahmedzlatan</span></div>
-<div class="match"><span>esmahil</span><span>vs</span><span>marwan</span></div>
-<div class="match"><span>kaka</span><span>vs</span><span>swra</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>azhdar</span></div>
+<div class="match"><span>humar</span><span>VS</span><span>meer</span></div>
+<div class="match"><span>hamastar</span><span>VS</span><span>ahmedzlatan</span></div>
+<div class="match"><span>esmahil</span><span>VS</span><span>marwan</span></div>
+<div class="match"><span>kaka</span><span>VS</span><span>swra</span></div>
 </div>
 
 <div class="round">
 <h3>Round 9</h3>
-<div class="match"><span>ahmed88</span><span>vs</span><span>meer</span></div>
-<div class="match"><span>azhdar</span><span>vs</span><span>ahmedzlatan</span></div>
-<div class="match"><span>humar</span><span>vs</span><span>marwan</span></div>
-<div class="match"><span>hamastar</span><span>vs</span><span>swra</span></div>
-<div class="match"><span>esmahil</span><span>vs</span><span>kaka</span></div>
+<div class="match"><span>ahmed88</span><span>VS</span><span>meer</span></div>
+<div class="match"><span>azhdar</span><span>VS</span><span>ahmedzlatan</span></div>
+<div class="match"><span>humar</span><span>VS</span><span>marwan</span></div>
+<div class="match"><span>hamastar</span><span>VS</span><span>swra</span></div>
+<div class="match"><span>esmahil</span><span>VS</span><span>kaka</span></div>
 </div>
 
 </div>
