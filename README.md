@@ -22,7 +22,7 @@ nav button.active{color:#fff;border-bottom:2px solid #22c55e;}
 .result{font-weight:bold;color:#22c55e;margin-top:2px;}
 table{width:100%;border-collapse:collapse;font-size:14px;}
 th,td{padding:8px;text-align:center;}
-th{background:#111827;}
+th{background:#green;}
 tr{border-bottom:1px solid #1f2937;}
 .team-cell{display:flex;align-items:center;gap:6px;justify-content:left;}
 .team-cell img{width:22px;height:22px;border-radius:50%;}
