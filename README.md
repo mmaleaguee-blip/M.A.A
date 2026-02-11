@@ -2,257 +2,132 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<!-- MOBILE FIX -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 <title>MAA League</title>
-
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* MOBILE ONLY VIEW */
-html, body {
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-}
-
-body{
-  background:#0e1217;
-  color:#fff;
-  max-width:480px;
-  margin:auto;
-}
-
-/* HEADER */
-header{
-  text-align:center;
-  padding:14px;
-  background:#111827;
-  font-size:20px;
-  font-weight:bold;
-}
-
-/* TABS */
-.tabs{
-  display:flex;
-  background:#0b1220;
-}
-.tabs button{
-  flex:1;
-  padding:12px 0;
-  border:none;
-  background:none;
-  color:#9ca3af;
-  font-size:15px;
-  cursor:pointer;
-}
-.tabs button.active{
-  color:#38bdf8;
-  border-bottom:3px solid #38bdf8;
-}
-
-/* CONTENT */
-.container{
-  padding:12px;
-}
-
-/* ROUNDS */
-.round{
-  margin-bottom:18px;
-}
-.round h3{
-  font-size:15px;
-  margin-bottom:8px;
-  color:#38bdf8;
-}
-
-/* MATCH CARD */
-.match{
-  background:#111827;
-  border-radius:10px;
-  padding:12px;
-  margin-bottom:8px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:14px;
-}
-.match span{
-  width:40%;
-  text-align:center;
-}
-.match span:nth-child(2){
-  width:20%;
-  color:#9ca3af;
-}
-
-/* STANDINGS */
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:14px;
-}
-th, td{
-  padding:10px 6px;
-  text-align:center;
-}
-th{
-  background:#111827;
-  color:#9ca3af;
-}
-tr{
-  background:#0e1217;
-}
-tr:not(:last-child){
-  border-bottom:1px solid #1f2933;
-}
-
-.hidden{
-  display:none;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+html,body{width:100%;overflow-x:hidden;background:#0e1217;color:#fff;}
+body{max-width:480px;margin:auto;}
+header{background:#111827;padding:15px;text-align:center;font-size:20px;font-weight:bold;border-bottom:1px solid #1f2937;}
+nav{display:flex;background:#111827;}
+nav button{flex:1;padding:12px;background:none;border:none;color:#9ca3af;font-size:14px;cursor:pointer;}
+nav button.active{color:#fff;border-bottom:2px solid #22c55e;}
+.section{padding:15px;}
+.round-title{margin:15px 0 8px;font-weight:bold;color:#22c55e;}
+.match{background:#111827;border-radius:10px;padding:12px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;font-size:14px;}
+.team{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;}
+.team img{width:26px;height:26px;border-radius:50%;object-fit:cover;}
+.vs{width:50px;text-align:center;color:#9ca3af;font-weight:bold;}
+.details{text-align:center;font-size:12px;margin-bottom:10px;color:#9ca3af;}
+.result{font-weight:bold;color:#22c55e;margin-top:2px;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th,td{padding:8px;text-align:center;}
+th{background:#111827;}
+tr{border-bottom:1px solid #1f2937;}
+.team-cell{display:flex;align-items:center;gap:6px;justify-content:left;}
+.team-cell img{width:22px;height:22px;border-radius:50%;}
 </style>
 </head>
-
 <body>
 
-<header>🏆 MAA League</header>
-
-<div class="tabs">
+<header>MAA League</header>
+<nav>
   <button class="active" onclick="showMatches()">Matches</button>
   <button onclick="showStandings()">Standings</button>
-</div>
+</nav>
 
-<div class="container">
-
-<!-- MATCHES -->
-<div id="matches">
-
-<div class="round">
-<h3>Round 1</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>marwan</span></div>
-<div class="match"><span>ahmedzlatan</span><span>VS</span><span>swra</span></div>
-<div class="match"><span>meer</span><span>VS</span><span>kaka</span></div>
-<div class="match"><span>azhdar</span><span>VS</span><span>esmahil</span></div>
-<div class="match"><span>humar</span><span>VS</span><span>hamastar</span></div>
-</div>
-
-<div class="round">
-<h3>Round 2</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>ahmedzlatan</span></div>
-<div class="match"><span>meer</span><span>VS</span><span>marwan</span></div>
-<div class="match"><span>azhdar</span><span>VS</span><span>swra</span></div>
-<div class="match"><span>humar</span><span>VS</span><span>kaka</span></div>
-<div class="match"><span>hamastar</span><span>VS</span><span>esmahil</span></div>
-</div>
-
-<div class="round">
-<h3>Round 3</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>swra</span></div>
-<div class="match"><span>marwan</span><span>VS</span><span>kaka</span></div>
-<div class="match"><span>ahmedzlatan</span><span>VS</span><span>esmahil</span></div>
-<div class="match"><span>meer</span><span>VS</span><span>hamastar</span></div>
-<div class="match"><span>azhdar</span><span>VS</span><span>humar</span></div>
-</div>
-
-<div class="round">
-<h3>Round 4</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>kaka</span></div>
-<div class="match"><span>swra</span><span>VS</span><span>esmahil</span></div>
-<div class="match"><span>marwan</span><span>VS</span><span>hamastar</span></div>
-<div class="match"><span>ahmedzlatan</span><span>VS</span><span>humar</span></div>
-<div class="match"><span>meer</span><span>VS</span><span>azhdar</span></div>
-</div>
-
-<div class="round">
-<h3>Round 5</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>esmahil</span></div>
-<div class="match"><span>kaka</span><span>VS</span><span>hamastar</span></div>
-<div class="match"><span>swra</span><span>VS</span><span>humar</span></div>
-<div class="match"><span>marwan</span><span>VS</span><span>azhdar</span></div>
-<div class="match"><span>ahmedzlatan</span><span>VS</span><span>meer</span></div>
-</div>
-
-<div class="round">
-<h3>Round 6</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>hamastar</span></div>
-<div class="match"><span>esmahil</span><span>VS</span><span>humar</span></div>
-<div class="match"><span>kaka</span><span>VS</span><span>azhdar</span></div>
-<div class="match"><span>swra</span><span>VS</span><span>meer</span></div>
-<div class="match"><span>marwan</span><span>VS</span><span>ahmedzlatan</span></div>
-</div>
-
-<div class="round">
-<h3>Round 7</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>humar</span></div>
-<div class="match"><span>hamastar</span><span>VS</span><span>azhdar</span></div>
-<div class="match"><span>esmahil</span><span>VS</span><span>meer</span></div>
-<div class="match"><span>kaka</span><span>VS</span><span>ahmedzlatan</span></div>
-<div class="match"><span>swra</span><span>VS</span><span>marwan</span></div>
-</div>
-
-<div class="round">
-<h3>Round 8</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>azhdar</span></div>
-<div class="match"><span>humar</span><span>VS</span><span>meer</span></div>
-<div class="match"><span>hamastar</span><span>VS</span><span>ahmedzlatan</span></div>
-<div class="match"><span>esmahil</span><span>VS</span><span>marwan</span></div>
-<div class="match"><span>kaka</span><span>VS</span><span>swra</span></div>
-</div>
-
-<div class="round">
-<h3>Round 9</h3>
-<div class="match"><span>ahmed88</span><span>VS</span><span>meer</span></div>
-<div class="match"><span>azhdar</span><span>VS</span><span>ahmedzlatan</span></div>
-<div class="match"><span>humar</span><span>VS</span><span>marwan</span></div>
-<div class="match"><span>hamastar</span><span>VS</span><span>swra</span></div>
-<div class="match"><span>esmahil</span><span>VS</span><span>kaka</span></div>
-</div>
-
-</div>
-
-<!-- STANDINGS -->
-<div id="standings" class="hidden">
-<table>
-<tr><th>Team</th><th>P</th><th>Pts</th></tr>
-<tr><td>ahmed88</td><td>0</td><td>0</td></tr>
-<tr><td>meer</td><td>0</td><td>0</td></tr>
-<tr><td>azhdar</td><td>0</td><td>0</td></tr>
-<tr><td>humar</td><td>0</td><td>0</td></tr>
-<tr><td>hamastar</td><td>0</td><td>0</td></tr>
-<tr><td>esmahil</td><td>0</td><td>0</td></tr>
-<tr><td>kaka</td><td>0</td><td>0</td></tr>
-<tr><td>swra</td><td>0</td><td>0</td></tr>
-<tr><td>marwan</td><td>0</td><td>0</td></tr>
-<tr><td>ahmedzlatan</td><td>0</td><td>0</td></tr>
-</table>
-</div>
-
-</div>
+<div id="matches" class="section"></div>
+<div id="standings" class="section" style="display:none;"></div>
 
 <script>
-const matches = document.getElementById("matches");
-const standings = document.getElementById("standings");
+// ======== TEAMS AND IMAGES ========
+const teamsImg = {
+  ahmed88:"ahmed88.jpg",
+  ahmedzlatan:"ahmedzlatan.jpg",
+  marwan:"marwan.jpg",
+  swra:"swra.jpg",
+  meer:"meer.jpg",
+  kaka:"kaka.jpg",
+  azhdar:"azhdar.jpg",
+  esmahil:"esmahil.jpg",
+  humar:"humar.jpg",
+  hamastar:"hamastar.jpg"
+};
 
-function showMatches(){
-  matches.classList.remove("hidden");
-  standings.classList.add("hidden");
-  document.querySelectorAll(".tabs button")[0].classList.add("active");
-  document.querySelectorAll(".tabs button")[1].classList.remove("active");
-}
+// ======== MATCHES DATA (edit scores here) ========
+// Format: [team1, team2, scoreTeam1, scoreTeam2]
+const rounds = [
+  [["ahmed88","marwan","2","1"],["ahmedzlatan","swra","-","-"],["meer","kaka","-","-"],["azhdar","esmahil","-","-"],["humar","hamastar","-","-"]],
+  [["ahmed88","ahmedzlatan","-","-"],["meer","marwan","-","-"],["azhdar","swra","-","-"],["humar","kaka","-","-"],["hamastar","esmahil","-","-"]],
+  [["ahmed88","swra","-","-"],["marwan","kaka","-","-"],["ahmedzlatan","esmahil","-","-"],["meer","hamastar","-","-"],["azhdar","humar","-","-"]],
+  [["ahmed88","kaka","-","-"],["swra","esmahil","-","-"],["marwan","hamastar","-","-"],["ahmedzlatan","humar","-","-"],["meer","azhdar","-","-"]],
+  [["ahmed88","esmahil","-","-"],["kaka","hamastar","-","-"],["swra","humar","-","-"],["marwan","azhdar","-","-"],["ahmedzlatan","meer","-","-"]],
+  [["ahmed88","hamastar","-","-"],["esmahil","humar","-","-"],["kaka","azhdar","-","-"],["swra","meer","-","-"],["marwan","ahmedzlatan","-","-"]],
+  [["ahmed88","humar","-","-"],["hamastar","azhdar","-","-"],["esmahil","meer","-","-"],["kaka","ahmedzlatan","-","-"],["swra","marwan","-","-"]],
+  [["ahmed88","azhdar","-","-"],["humar","meer","-","-"],["hamastar","ahmedzlatan","-","-"],["esmahil","marwan","-","-"],["kaka","swra","-","-"]],
+  [["ahmed88","meer","-","-"],["azhdar","ahmedzlatan","-","-"],["humar","marwan","-","-"],["hamastar","swra","-","-"],["esmahil","kaka","-","-"]]
+];
 
-function showStandings(){
-  matches.classList.add("hidden");
-  standings.classList.remove("hidden");
-  document.querySelectorAll(".tabs button")[1].classList.add("active");
-  document.querySelectorAll(".tabs button")[0].classList.remove("active");
+// ======== GENERATE MATCHES ========
+const matchesDiv = document.getElementById("matches");
+rounds.forEach((round,i)=>{
+  const roundTitle = document.createElement("div");
+  roundTitle.className="round-title";
+  roundTitle.textContent=`Round ${i+1}`;
+  matchesDiv.appendChild(roundTitle);
+
+  round.forEach(match=>{
+    const [t1,t2,s1,s2] = match;
+    const matchDiv=document.createElement("div");
+    matchDiv.className="match";
+    matchDiv.innerHTML=`<div class="team"><img src="${teamsImg[t1]}"> ${t1}</div>
+                        <div class="vs">VS</div>
+                        <div class="team"><img src="${teamsImg[t2]}"> ${t2}</div>`;
+    matchesDiv.appendChild(matchDiv);
+
+    const detailsDiv=document.createElement("div");
+    detailsDiv.className="details";
+    detailsDiv.innerHTML=`Time<div class="result">${s1==='-'?'-':s1} - ${s2==='-'?'-':s2}</div>`;
+    matchesDiv.appendChild(detailsDiv);
+  });
+});
+
+// ======== CALCULATE STANDINGS ========
+const standingsDiv=document.getElementById("standings");
+function calcStandings(){
+  const teamStats={};
+  Object.keys(teamsImg).forEach(team=>{
+    teamStats[team]={P:0,Pts:0};
+  });
+
+  rounds.forEach(round=>{
+    round.forEach(match=>{
+      const [t1,t2,s1,s2] = match;
+      if(s1!=='-' && s2!=='-'){
+        teamStats[t1].P++;
+        teamStats[t2].P++;
+        if(parseInt(s1)>parseInt(s2)){teamStats[t1].Pts+=3;}
+        else if(parseInt(s1)<parseInt(s2)){teamStats[t2].Pts+=3;}
+        else{teamStats[t1].Pts+=1;teamStats[t2].Pts+=1;}
+      }
+    });
+  });
+
+  // Sort by points
+  const sortedTeams = Object.keys(teamStats).sort((a,b)=>teamStats[b].Pts-teamStats[a].Pts);
+
+  let tableHTML="<table><tr><th>#</th><th>Team</th><th>P</th><th>Pts</th></tr>";
+  sortedTeams.forEach((team,i)=>{
+    tableHTML+=`<tr><td>${i+1}</td><td class="team-cell"><img src="${teamsImg[team]}"> ${team}</td><td>${teamStats[team].P}</td><td>${teamStats[team].Pts}</td></tr>`;
+  });
+  tableHTML+="</table>";
+  standingsDiv.innerHTML=tableHTML;
 }
+calcStandings();
+
+// ======== TOGGLE ========
+function showMatches(){matchesDiv.style.display="block";standingsDiv.style.display="none";document.querySelectorAll("nav button")[0].classList.add("active");document.querySelectorAll("nav button")[1].classList.remove("active");}
+function showStandings(){matchesDiv.style.display="none";standingsDiv.style.display="block";document.querySelectorAll("nav button")[1].classList.add("active");document.querySelectorAll("nav button")[0].classList.remove("active");}
 </script>
 
 </body>
