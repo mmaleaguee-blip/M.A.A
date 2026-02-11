@@ -9,7 +9,7 @@
 html,body{width:100%;overflow-x:hidden;background:#0e1217;color:#fff;}
 body{max-width:480px;margin:auto;}
 header{background:#111827;padding:15px;text-align:center;font-size:20px;font-weight:bold;border-bottom:1px solid #1f2937;}
-nav{display:flex;background:#111827;}
+nav{display:flex;background:#green;}
 nav button{flex:1;padding:12px;background:none;border:none;color:#9ca3af;font-size:14px;cursor:pointer;}
 nav button.active{color:#fff;border-bottom:2px solid #22c55e;}
 .section{padding:15px;}
@@ -20,10 +20,40 @@ nav button.active{color:#fff;border-bottom:2px solid #22c55e;}
 .vs{width:50px;text-align:center;color:#9ca3af;font-weight:bold;}
 .details{text-align:center;font-size:12px;margin-bottom:10px;color:#9ca3af;}
 .result{font-weight:bold;color:#22c55e;margin-top:2px;}
-table{width:100%;border-collapse:collapse;font-size:14px;}
-th,td{padding:8px;text-align:center;}
-th{background:#green;}
-tr{border-bottom:1px solid #1f2937;}
+/* STANDINGS FIX */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;
+  background: #0e1217; /* table background dark */
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word;
+  background: #111827; /* cells dark */
+  color: #fff; /* text white */
+  border-bottom: 1px solid #1f2937;
+}
+
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.team-cell img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .team-cell{display:flex;align-items:center;gap:6px;justify-content:left;}
 .team-cell img{width:22px;height:22px;border-radius:50%;}
 </style>
@@ -57,7 +87,7 @@ const teamsImg = {
 // ======== MATCHES DATA (edit scores here) ========
 // Format: [team1, team2, scoreTeam1, scoreTeam2]
 const rounds = [
-  [["ahmed88","marwan","2","1"],["ahmedzlatan","swra","-","-"],["meer","kaka","-","-"],["azhdar","esmahil","-","-"],["humar","hamastar","-","-"]],
+  [["ahmed88","marwan","2","2"],["ahmedzlatan","swra","-","-"],["meer","kaka","-","-"],["azhdar","esmahil","-","-"],["humar","hamastar","-","-"]],
   [["ahmed88","ahmedzlatan","-","-"],["meer","marwan","-","-"],["azhdar","swra","-","-"],["humar","kaka","-","-"],["hamastar","esmahil","-","-"]],
   [["ahmed88","swra","-","-"],["marwan","kaka","-","-"],["ahmedzlatan","esmahil","-","-"],["meer","hamastar","-","-"],["azhdar","humar","-","-"]],
   [["ahmed88","kaka","-","-"],["swra","esmahil","-","-"],["marwan","hamastar","-","-"],["ahmedzlatan","humar","-","-"],["meer","azhdar","-","-"]],
