@@ -44,13 +44,13 @@ const teamsImg = {
   ahmed88:"ahmed88.jpg",
   ahmedzlatan:"ahmedzlatan.jpg",
   marwan:"marwan.jpg",
-  swra:"swra.jpg",
-  meer:"meer.jpg",
+  swra:"swwra.jpg",
+  meer:"meeer.jpg",
   kaka:"kaka.jpg",
   azhdar:"azhdar.jpg",
   esmahil:"esmahil.jpg",
   humar:"humar.jpg",
-  hamastar:"hamastar.jpg"
+  hamastar:"hamast4r.jpg"
 };
 
 // ======== MATCHES DATA ========
