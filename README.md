@@ -57,7 +57,7 @@ const teamsImg = {
 const rounds = [
   [["ahmed88","marwan","1","2"],["ahmedzlatan","swra","1","3"],["meer","kaka","3","2"],["azhdar","esmahil","4","1"],["humar","hamastar","0","5"]],
   [["ahmed88","ahmedzlatan","dwaxraw","-"],["meer","marwan","4","5"],["azhdar","swra","4","3"],["humar","kaka","1","5"],["hamastar","esmahil","3","2"]],
-  [["ahmed88","swra","2","2"],["marwan","kaka","-","-"],["ahmedzlatan","esmahil","-","-"],["meer","hamastar","2","4"],["azhdar","humar","-","-"]],
+  [["ahmed88","swra","2","2"],["marwan","kaka","1","2"],["ahmedzlatan","esmahil","-","-"],["meer","hamastar","2","4"],["azhdar","humar","-","-"]],
   [["ahmed88","kaka","-","-"],["swra","esmahil","-","-"],["marwan","hamastar","-","-"],["ahmedzlatan","humar","-","-"],["meer","azhdar","-","-"]],
   [["ahmed88","esmahil","-","-"],["kaka","hamastar","-","-"],["swra","humar","-","-"],["marwan","azhdar","-","-"],["ahmedzlatan","meer","-","-"]],
   [["ahmed88","hamastar","-","-"],["esmahil","humar","-","-"],["kaka","azhdar","-","-"],["swra","meer","-","-"],["marwan","ahmedzlatan","-","-"]],
