@@ -56,8 +56,10 @@ const teamsImg = {
 // ======== MATCHES DATA ========
 const rounds = [
   [["ahmed88","marwan","1","2"],["ahmedzlatan","swra","1","3"],["meer","kaka","3","2"],["azhdar","esmahil","4","1"],["humar","hamastar","0","5"]],
+ 
   [["ahmed88","ahmedzlatan","dwaxraw","-"],["meer","marwan","4","5"],["azhdar","swra","4","3"],["humar","kaka","1","5"],["hamastar","esmahil","3","2"]],
-  [["ahmed88","swra","2","2"],["marwan","kaka","1","2"],["ahmedzlatan","esmahil","dwaxraw","-"],["meer","hamastar","2","4"],["azhdar","humar","3","4"]],
+ 
+  [["ahmed88","swra","2","2"],["marwan","kaka","1","2"],["ahmedzlatan","esmahil","3","6"],["meer","hamastar","2","4"],["azhdar","humar","3","4"]],
  
   [["ahmed88","kaka","6","2"],["swra","esmahil","2","0"],["marwan","hamastar","-","-"],["ahmedzlatan","humar","-","-"],["meer","azhdar","-","-"]],
   [["ahmed88","esmahil","-","-"],["kaka","hamastar","-","-"],["swra","humar","-","-"],["marwan","azhdar","-","-"],["ahmedzlatan","meer","-","-"]],
