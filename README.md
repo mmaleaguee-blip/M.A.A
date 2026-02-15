@@ -68,7 +68,7 @@ const rounds = [
   [["ahmed88","hamastar","-","-"],["esmahil","humar","-","-"],["kaka","azhdar","-","-"],["swra","meer","-","-"],["marwan","ahmedzlatan","-","-"]],
   [["ahmed88","humar","-","-"],["hamastar","azhdar","-","-"],["esmahil","meer","-","-"],["kaka","ahmedzlatan","-","-"],["swra","marwan","-","-"]],
   [["ahmed88","azhdar","-","-"],["humar","meer","-","-"],["hamastar","ahmedzlatan","-","-"],["esmahil","marwan","-","-"],["kaka","swra","-","-"]],
-  [["ahmed88","meer","-","-"],["azhdar","ahmedzlatan","-","-"],["humar","marwan","-","-"],["hamastar","swra","-","-"],["esmahil","kaka","-","-"]]
+  [["ahmed88","meer","4","4"],["azhdar","ahmedzlatan","-","-"],["humar","marwan","-","-"],["hamastar","swra","-","-"],["esmahil","kaka","-","-"]]
 ];
 
 // ======== GENERATE MATCHES ========
