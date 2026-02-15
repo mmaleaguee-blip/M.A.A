@@ -71,7 +71,7 @@ const rounds = [
  
   [["ahmed88","azhdar","-","-"],["humar","meer","-","-"],["hamastar","ahmedzlatan","-","-"],["esmahil","marwan","-","-"],["kaka","swra","-","-"]],
  
-  [["ahmed88","meer","4","4"],["azhdar","ahmedzlatan","-","-"],["humar","marwan","-","-"],["hamastar","swra","-","-"],["esmahil","kaka","1","5"]]
+  [["ahmed88","meer","4","4"],["azhdar","ahmedzlatan","1","0"],["humar","marwan","-","-"],["hamastar","swra","-","-"],["esmahil","kaka","1","5"]]
 ];
 
 // ======== GENERATE MATCHES ========
