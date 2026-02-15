@@ -61,11 +61,11 @@ const rounds = [
  
   [["ahmed88","swra","2","2"],["marwan","kaka","1","2"],["ahmedzlatan","esmahil","3","6"],["meer","hamastar","2","4"],["azhdar","humar","3","4"]],
  
-  [["ahmed88","kaka","6","2"],["swra","esmahil","2","0"],["marwan","hamastar","6","1"],["ahmedzlatan","humar","-","-"],["meer","azhdar","2","1"]],
+  [["ahmed88","kaka","6","2"],["swra","esmahil","2","0"],["marwan","hamastar","6","1"],["ahmedzlatan","humar","5","1"],["meer","azhdar","2","1"]],
  
   [["ahmed88","esmahil","2","4"],["kaka","hamastar","1","1"],["swra","humar","-","-"],["marwan","azhdar","5","3"],["ahmedzlatan","meer","5","4"]],
  
-  [["ahmed88","hamastar","-","-"],["esmahil","humar","-","-"],["kaka","azhdar","-","-"], ["swra","meer","-","-"],["marwan","ahmedzlatan","-","-"]],
+  [["ahmed88","hamastar","-","-"],["esmahil","humar","-","-"],["kaka","azhdar","-","-"], ["swra","meer","3","3"],["marwan","ahmedzlatan","-","-"]],
   [["ahmed88","humar","-","-"],["hamastar","azhdar","3","3"],["esmahil","meer","6","2"],["kaka","ahmedzlatan","-","-"],["swra","marwan","-","-"]],
   [["ahmed88","azhdar","-","-"],["humar","meer","-","-"],["hamastar","ahmedzlatan","-","-"],["esmahil","marwan","-","-"],["kaka","swra","-","-"]],
   [["ahmed88","meer","4","4"],["azhdar","ahmedzlatan","-","-"],["humar","marwan","-","-"],["hamastar","swra","-","-"],["esmahil","kaka","-","-"]]
