@@ -1,4 +1,3 @@
- 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -20,25 +19,36 @@ nav button.active{color:#fff;border-bottom:2px solid #22c55e;}
 .vs{width:50px;text-align:center;color:#9ca3af;font-weight:bold;}
 .details{text-align:center;font-size:12px;margin-bottom:10px;color:#9ca3af;}
 .result{font-weight:bold;color:#22c55e;margin-top:2px;}
-/* STANDINGS FIX */
+
 table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: fixed; background: #0e1217; }
 th, td { padding: 8px; text-align: center; word-wrap: break-word; background: #111827; color: #fff; border-bottom: 1px solid #1f2937; }
 .team-cell { display: flex; align-items: center; gap: 6px; justify-content: flex-start; overflow: hidden; }
 .team-cell img { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.knockout-image{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:0;
+}
+
 </style>
 </head>
 <body>
 
 <header>MAA League</header>
+
 <nav>
   <button class="active" onclick="showMatches()">Matches</button>
   <button onclick="showStandings()">Standings</button>
+  <button onclick="showKnockout()">Knockout</button>
 </nav>
 
 <div id="matches" class="section"></div>
 <div id="standings" class="section" style="display:none;"></div>
+<div id="knockout" class="section" style="display:none;"></div>
 
 <script>
+
 // ======== TEAMS AND IMAGES ========
 const teamsImg = {
   ahmed88:"ahmed88.jpg",
@@ -56,34 +66,26 @@ const teamsImg = {
 // ======== MATCHES DATA ========
 const rounds = [
   [["ahmed88","marwan","1","2"],["ahmedzlatan","swra","1","3"],["meer","kaka","3","2"],["azhdar","esmahil","4","1"],["humar","hamastar","0","5"]],
- 
   [["ahmed88","ahmedzlatan","2","0"],["meer","marwan","4","5"],["azhdar","swra","4","3"],["humar","kaka","1","5"],["hamastar","esmahil","3","2"]],
- 
   [["ahmed88","swra","2","2"],["marwan","kaka","1","2"],["ahmedzlatan","esmahil","3","6"],["meer","hamastar","2","4"],["azhdar","humar","3","4"]],
- 
   [["ahmed88","kaka","6","2"],["swra","esmahil","2","0"],["marwan","hamastar","6","1"],["ahmedzlatan","humar","5","1"],["meer","azhdar","2","1"]],
- 
   [["ahmed88","esmahil","2","4"],["kaka","hamastar","1","1"],["swra","humar","4","2"],["marwan","azhdar","5","3"],["ahmedzlatan","meer","5","4"]],
- 
-  [["ahmed88","hamastar","0","6"],["esmahil","humar","3","0"],["kaka","azhdar","1","0"], ["swra","meer","3","3"],["marwan","ahmedzlatan","7","4"]],
- 
+  [["ahmed88","hamastar","0","6"],["esmahil","humar","3","0"],["kaka","azhdar","1","0"],["swra","meer","3","3"],["marwan","ahmedzlatan","7","4"]],
   [["ahmed88","humar","4","1"],["hamastar","azhdar","3","3"],["esmahil","meer","6","2"],["kaka","ahmedzlatan","2","0"],["swra","marwan","1","4"]],
- 
   [["ahmed88","azhdar","1","2"],["humar","meer","2","3"],["hamastar","ahmedzlatan","1","3"],["esmahil","marwan","2","3"],["kaka","swra","1","1"]],
- 
   [["ahmed88","meer","4","4"],["azhdar","ahmedzlatan","1","0"],["humar","marwan","3","2"],["hamastar","swra","5","4"],["esmahil","kaka","1","5"]]
 ];
 
 // ======== GENERATE MATCHES ========
 const matchesDiv = document.getElementById("matches");
 rounds.forEach((round,i)=>{
-  const roundTitle = document.createElement("div");
+  const roundTitle=document.createElement("div");
   roundTitle.className="round-title";
   roundTitle.textContent=`Round ${i+1}`;
   matchesDiv.appendChild(roundTitle);
 
   round.forEach(match=>{
-    const [t1,t2,s1,s2] = match;
+    const [t1,t2,s1,s2]=match;
     const matchDiv=document.createElement("div");
     matchDiv.className="match";
     matchDiv.innerHTML=`<div class="team"><img src="${teamsImg[t1]}"> ${t1}</div>
@@ -93,10 +95,21 @@ rounds.forEach((round,i)=>{
 
     const detailsDiv=document.createElement("div");
     detailsDiv.className="details";
-    detailsDiv.innerHTML=`Time<div class="result">${s1==='-'?'-':s1} - ${s2==='-'?'-':s2}</div>`;
+    detailsDiv.innerHTML=`Time<div class="result">${s1} - ${s2}</div>`;
     matchesDiv.appendChild(detailsDiv);
   });
 });
+
+// ======== KNOCKOUT SECTION (ADDED) ========
+const knockoutDiv=document.getElementById("knockout");
+
+knockoutDiv.innerHTML=`
+<div class="round-title">round 8</div>
+
+<img src="r8.jpg" class="knockout-image">
+
+
+`;
 
 // ======== CALCULATE STANDINGS ========
 const standingsDiv=document.getElementById("standings");
@@ -108,26 +121,20 @@ function calcStandings(){
 
   rounds.forEach(round=>{
     round.forEach(match=>{
-      const [t1,t2,s1,s2] = match;
-      if(s1!=='-' && s2!=='-'){
-        const g1=parseInt(s1), g2=parseInt(s2);
-        teamStats[t1].P++;
-        teamStats[t2].P++;
-        teamStats[t1].GF+=g1;
-        teamStats[t1].GA+=g2;
-        teamStats[t2].GF+=g2;
-        teamStats[t2].GA+=g1;
-        teamStats[t1].GD=teamStats[t1].GF-teamStats[t1].GA;
-        teamStats[t2].GD=teamStats[t2].GF-teamStats[t2].GA;
-        if(g1>g2){teamStats[t1].Pts+=3;}
-        else if(g1<g2){teamStats[t2].Pts+=3;}
-        else{teamStats[t1].Pts+=1;teamStats[t2].Pts+=1;}
-      }
+      const [t1,t2,s1,s2]=match;
+      const g1=parseInt(s1),g2=parseInt(s2);
+      teamStats[t1].P++; teamStats[t2].P++;
+      teamStats[t1].GF+=g1; teamStats[t1].GA+=g2;
+      teamStats[t2].GF+=g2; teamStats[t2].GA+=g1;
+      teamStats[t1].GD=teamStats[t1].GF-teamStats[t1].GA;
+      teamStats[t2].GD=teamStats[t2].GF-teamStats[t2].GA;
+      if(g1>g2){teamStats[t1].Pts+=3;}
+      else if(g1<g2){teamStats[t2].Pts+=3;}
+      else{teamStats[t1].Pts+=1;teamStats[t2].Pts+=1;}
     });
   });
 
-  // Sort by points then GD then GF
-  const sortedTeams = Object.keys(teamStats).sort((a,b)=>{
+  const sortedTeams=Object.keys(teamStats).sort((a,b)=>{
     if(teamStats[b].Pts!==teamStats[a].Pts) return teamStats[b].Pts-teamStats[a].Pts;
     if(teamStats[b].GD!==teamStats[a].GD) return teamStats[b].GD-teamStats[a].GD;
     return teamStats[b].GF-teamStats[a].GF;
@@ -154,16 +161,25 @@ calcStandings();
 function showMatches(){
   matchesDiv.style.display="block";
   standingsDiv.style.display="none";
+  knockoutDiv.style.display="none";
+  document.querySelectorAll("nav button").forEach(btn=>btn.classList.remove("active"));
   document.querySelectorAll("nav button")[0].classList.add("active");
-  document.querySelectorAll("nav button")[1].classList.remove("active");
 }
 function showStandings(){
   matchesDiv.style.display="none";
   standingsDiv.style.display="block";
+  knockoutDiv.style.display="none";
+  document.querySelectorAll("nav button").forEach(btn=>btn.classList.remove("active"));
   document.querySelectorAll("nav button")[1].classList.add("active");
-  document.querySelectorAll("nav button")[0].classList.remove("active");
 }
-</script>
+function showKnockout(){
+  matchesDiv.style.display="none";
+  standingsDiv.style.display="none";
+  knockoutDiv.style.display="block";
+  document.querySelectorAll("nav button").forEach(btn=>btn.classList.remove("active"));
+  document.querySelectorAll("nav button")[2].classList.add("active");
+}
 
+</script>
 </body>
 </html>
