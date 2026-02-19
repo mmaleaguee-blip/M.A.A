@@ -51,6 +51,10 @@ th, td { padding: 8px; text-align: center; word-wrap: break-word; background: #1
 
 // ======== TEAMS AND IMAGES ========
 const teamsImg = {
+  sarhad:"sarhad.jpg",
+  matin:"matin.jpg",
+  ramin:"ramin.jpg",
+  masud:"masud.jpg",
   ahmed88:"ahmed88.jpg",
   ahmedzlatan:"ahmedzlatan.jpg",
   marwan:"marwan.jpg",
@@ -63,17 +67,35 @@ const teamsImg = {
   hamastar:"hamast4r.jpg"
 };
 
-// ======== MATCHES DATA ========
 const rounds = [
-  [["ahmed88","marwan","1","2"],["ahmedzlatan","swra","1","3"],["meer","kaka","3","2"],["azhdar","esmahil","4","1"],["humar","hamastar","0","5"]],
-  [["ahmed88","ahmedzlatan","2","0"],["meer","marwan","4","5"],["azhdar","swra","4","3"],["humar","kaka","1","5"],["hamastar","esmahil","3","2"]],
-  [["ahmed88","swra","2","2"],["marwan","kaka","1","2"],["ahmedzlatan","esmahil","3","6"],["meer","hamastar","2","4"],["azhdar","humar","3","4"]],
-  [["ahmed88","kaka","6","2"],["swra","esmahil","2","0"],["marwan","hamastar","6","1"],["ahmedzlatan","humar","5","1"],["meer","azhdar","2","1"]],
-  [["ahmed88","esmahil","2","4"],["kaka","hamastar","1","1"],["swra","humar","4","2"],["marwan","azhdar","5","3"],["ahmedzlatan","meer","5","4"]],
-  [["ahmed88","hamastar","0","6"],["esmahil","humar","3","0"],["kaka","azhdar","1","0"],["swra","meer","3","3"],["marwan","ahmedzlatan","7","4"]],
-  [["ahmed88","humar","4","1"],["hamastar","azhdar","3","3"],["esmahil","meer","6","2"],["kaka","ahmedzlatan","2","0"],["swra","marwan","1","4"]],
-  [["ahmed88","azhdar","1","2"],["humar","meer","2","3"],["hamastar","ahmedzlatan","1","3"],["esmahil","marwan","2","3"],["kaka","swra","1","1"]],
-  [["ahmed88","meer","4","4"],["azhdar","ahmedzlatan","1","0"],["humar","marwan","3","2"],["hamastar","swra","5","4"],["esmahil","kaka","1","5"]]
+  // r1
+
+  [["meer","ramin","-","-"],["masud","kaka","-","-"],["ahmed88","sarhad","-","-"],["swra","humar","-","-"],["marwan","matin","-","-"],["esmahil","azhdar","-","-"],["hamastar","ahmedzlatan","-","-"]],
+//r2
+    [["meer","masud","-","-"],["ahmed88","ramin","-","-"],["swra","kaka","-","-"],["marwan","sarhad","-","-"],["esmahil","humar","-","-"],["hamastar","matin","-","-"],["ahmedzlatan","azhdar","-","-"]],
+  //r3
+  [["meer","kaka","-","-"],["ramin","sarhad","-","-"],["masud","humar","-","-"],["ahmed88","matin","-","-"],["swra","azhdar","-","-"],["marwan","ahmedzlatan","-","-"],["esmahil","hamastar","-","-"]],
+  //r4
+  [["meer","sarhad","-","-"],["kaka","humar","-","-"],["ramin","matin","-","-"],["masud","azhdar","-","-"],["ahmed88","ahmedzlatan","-","-"],["swra","hamastar","-","-"],["marwan","esmahil","-","-"]],
+  //r5
+  [["meer","humar","-","-"],["sarhad","matin","-","-"],["kaka","azhdar","-","-"],["ramin","ahmedzlatan","-","-"],["masud","hamastar","-","-"],["ahmed88","esmahil","-","-"],["swra","marwan","-","-"]],
+  //r6
+  [["meer","matin","-","-"],["humar","azhdar","-","-"],["sarhad","ahmedzlatan","-","-"],["kaka","hamastar","-","-"],["ramin","esmahil","-","-"],["masud","marwan","-","-"],["ahmed88","swra","-","-"]],
+  //r7
+  [["meer","azhdar","-","-"],["matin","ahmedzlatan","-","-"],["humar","hamastar","-","-"],["sarhad","esmahil","-","-"],["kaka","marwan","-","-"],["ramin","swra","-","-"],["masud","ahmed88","-","-"]],
+  //r8
+  [["meer","ahmedzlatan","-","-"],["azhdar","hamastar","-","-"],["matin","esmahil","-","-"],["humar","marwan","-","-"],["sarhad","swra","-","-"],["kaka","ahmed88","-","-"],["ramin","masud","-","-"]],
+  //r9
+  [["meer","hamastar","-","-"],["ahmedzlatan","esmahil","-","-"],["azhdar","marwan","-","-"],["matin","swra","-","-"],["humar","ahmed88","-","-"],["sarhad","masud","-","-"],["kaka","ramin","-","-"]],
+  //r10
+  [["meer","esmahil","-","-"],["hamastar","marwan","-","-"],["ahmedzlatan","swra","-","-"],["azhdar","ahmed88","-","-"],["matin","masud","-","-"],["humar","ramin","-","-"],["sarhad","kaka","-","-"]],
+  //r11
+  [["meer","marwan","-","-"],["esmahil","swra","-","-"],["hamastar","ahmed88","-","-"],["ahmedzlatan","masud","-","-"],["azhdar","ramin","-","-"],["matin","kaka","-","-"],["humar","sarhad","-","-"]],
+  //r12
+  [["meer","swra","-","-"],["marwan","ahmed88","-","-"],["esmahil","masud","-","-"],["hamastar","ramin","-","-"],["ahmedzlatan","kaka","-","-"],["azhdar","sarhad","-","-"],["matin","humar","-","-"]],
+  //r13
+
+  [["meer","ahmed88","-","-"],["swra","masud","-","-"],["marwan","ramin","-","-"],["esmahil","kaka","-","-"],["hamastar","sarhad","-","-"],["ahmedzlatan","humar","-","-"],["azhdar","matin","-","-"]]
 ];
 
 // ======== GENERATE MATCHES ========
@@ -100,18 +122,12 @@ rounds.forEach((round,i)=>{
   });
 });
 
-// ======== KNOCKOUT SECTION (ADDED) ========
+// ======== KNOCKOUT SECTION ========
 const knockoutDiv=document.getElementById("knockout");
+knockoutDiv.innerHTML=`<div class="round-title">round 8</div>
+<img src="r88.jpg" class="knockout-image">`;
 
-knockoutDiv.innerHTML=`
-<div class="round-title">round 8</div>
-
-<img src="r8.jpg" class="knockout-image">
-
-
-`;
-
-// ======== CALCULATE STANDINGS ========
+// ======== CALCULATE STANDINGS (FIXED) ========
 const standingsDiv=document.getElementById("standings");
 function calcStandings(){
   const teamStats={};
@@ -122,15 +138,20 @@ function calcStandings(){
   rounds.forEach(round=>{
     round.forEach(match=>{
       const [t1,t2,s1,s2]=match;
-      const g1=parseInt(s1),g2=parseInt(s2);
-      teamStats[t1].P++; teamStats[t2].P++;
-      teamStats[t1].GF+=g1; teamStats[t1].GA+=g2;
-      teamStats[t2].GF+=g2; teamStats[t2].GA+=g1;
-      teamStats[t1].GD=teamStats[t1].GF-teamStats[t1].GA;
-      teamStats[t2].GD=teamStats[t2].GF-teamStats[t2].GA;
-      if(g1>g2){teamStats[t1].Pts+=3;}
-      else if(g1<g2){teamStats[t2].Pts+=3;}
-      else{teamStats[t1].Pts+=1;teamStats[t2].Pts+=1;}
+      const g1=parseInt(s1);
+      const g2=parseInt(s2);
+
+      // Only count match if scores are numbers
+      if(!isNaN(g1) && !isNaN(g2)){
+        teamStats[t1].P++; teamStats[t2].P++;
+        teamStats[t1].GF+=g1; teamStats[t1].GA+=g2;
+        teamStats[t2].GF+=g2; teamStats[t2].GA+=g1;
+        teamStats[t1].GD=teamStats[t1].GF-teamStats[t1].GA;
+        teamStats[t2].GD=teamStats[t2].GF-teamStats[t2].GA;
+        if(g1>g2){ teamStats[t1].Pts+=3; }
+        else if(g1<g2){ teamStats[t2].Pts+=3; }
+        else{ teamStats[t1].Pts+=1; teamStats[t2].Pts+=1; }
+      }
     });
   });
 
