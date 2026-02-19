@@ -64,7 +64,7 @@ const teamsImg = {
   azhdar:"azhdar.jpg",
   esmahil:"esmahil.jpg",
   humar:"humar.jpg",
-  hamastar:"hamast4r.jpg"
+  hamastar:"hamastar.jpg"
 };
 
 const rounds = [
