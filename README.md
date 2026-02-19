@@ -51,7 +51,7 @@ th, td { padding: 8px; text-align: center; word-wrap: break-word; background: #1
 
 // ======== TEAMS AND IMAGES ========
 const teamsImg = {
-  sarhad:"sarhad.jpg",
+  sarhad:"sarhad.png",
   matin:"matin.jpg",
   ramin:"ramin.jpg",
   masud:"masud.jpg",
