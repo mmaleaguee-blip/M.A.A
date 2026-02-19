@@ -70,7 +70,7 @@ const teamsImg = {
 const rounds = [
   // r1
 
-  [["meer","ramin","-","-"],["masud","kaka","-","-"],["ahmed88","sarhad","-","-"],["swra","humar","-","-"],["marwan","matin","-","-"],["esmahil","azhdar","-","-"],["hamastar","ahmedzlatan","-","-"]],
+  [["meer","ramin","-","-"],["masud","kaka","-","-"],["ahmed88","sarhad","-","-"],["swra","humar","-","-"],["marwan","matin","1","1"],["esmahil","azhdar","-","-"],["hamastar","ahmedzlatan","-","-"]],
 //r2
     [["meer","masud","-","-"],["ahmed88","ramin","-","-"],["swra","kaka","-","-"],["marwan","sarhad","-","-"],["esmahil","humar","-","-"],["hamastar","matin","-","-"],["ahmedzlatan","azhdar","-","-"]],
   //r3
