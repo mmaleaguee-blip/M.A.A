@@ -78,7 +78,7 @@ const rounds = [
   //r4
   [["meer","sarhad","-","-"],["kaka","humar","-","-"],["ramin","matin","-","-"],["masud","azhdar","-","-"],["ahmed88","ahmedzlatan","-","-"],["swra","hamastar","-","-"],["marwan","esmahil","4","1"]],
   //r5
-  [["meer","humar","-","-"],["sarhad","matin","-","-"],["kaka","azhdar","-","-"],["ramin","ahmedzlatan","-","-"],["masud","hamastar","-","-"],["ahmed88","esmahil","-","-"],["swra","marwan","-","-"]],
+  [["meer","humar","-","-"],["sarhad","matin","-","-"],["kaka","azhdar","-","-"],["ramin","ahmedzlatan","-","-"],["masud","hamastar","-","-"],["ahmed88","esmahil","2","1"],["swra","marwan","-","-"]],
   //r6
   [["meer","matin","-","-"],["humar","azhdar","-","-"],["sarhad","ahmedzlatan","-","-"],["kaka","hamastar","-","-"],["ramin","esmahil","-","-"],["masud","marwan","-","-"],["ahmed88","swra","-","-"]],
   //r7
