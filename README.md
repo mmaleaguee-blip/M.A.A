@@ -83,9 +83,10 @@ const rounds = [
   //r6
   [["meer","matin","2","5"],["humar","azhdar","-","-"],["sarhad","ahmedzlatan","-","-"],["kaka","hamastar","-","-"],["ramin","esmahil","-","-"],["masud","marwan","-","-"],["ahmed88","swra","0","3"]],
   //r7
-  [["meer","azhdar","0","3"],["matin","ahmedzlatan","-","-"],["humar","hamastar","-","-"],["sarhad","esmahil","-","-"],["kaka","marwan","-","-"],["ramin","swra","-","-"],["masud","ahmed88","1","2"]],
+  [["meer","azhdar","0","3"],["matin","ahmedzlatan","-","-"],["humar","hamastar","-","-"],["sarhad","esmahil","-","-"],["kaka","marwan","-","-"],
+   ["ramin","swra","-","-"],["masud","ahmed88","1","2"]],
   //r8
-  [["meer","ahmedzlatan","-","-"],["azhdar","hamastar","-","-"],["matin","esmahil","-","-"],["humar","marwan","-","-"],["sarhad","swra","-","-"],["kaka","ahmed88","-","-"],["ramin","masud","-","-"]],
+  [["meer","ahmedzlatan","3","1"],["azhdar","hamastar","-","-"],["matin","esmahil","-","-"],["humar","marwan","-","-"],["sarhad","swra","-","-"],["kaka","ahmed88","-","-"],["ramin","masud","-","-"]],
   //r9
   [["meer","hamastar","-","-"],["ahmedzlatan","esmahil","-","-"],["azhdar","marwan","-","-"],["matin","swra","-","-"],["humar","ahmed88","-","-"],["sarhad","masud","-","-"],["kaka","ramin","-","-"]],
   //r10
@@ -93,7 +94,7 @@ const rounds = [
   //r11
   [["meer","marwan","-","-"],["esmahil","swra","-","-"],["hamastar","ahmed88","-","-"],["ahmedzlatan","masud","-","-"],["azhdar","ramin","-","-"],["matin","kaka","-","-"],["humar","sarhad","-","-"]],
   //r12
-  [["meer","swra","-","-"],["marwan","ahmed88","-","-"],["esmahil","masud","-","-"],["hamastar","ramin","-","-"],["ahmedzlatan","kaka","-","-"],["azhdar","sarhad","4","1"],["matin","humar","-","-"]],
+  [["meer","swra","-","-"],["marwan","ahmed88","5","2"],["esmahil","masud","-","-"],["hamastar","ramin","-","-"],["ahmedzlatan","kaka","-","-"],["azhdar","sarhad","4","1"],["matin","humar","-","-"]],
   //r13
 
   [["meer","ahmed88","-","-"],["swra","masud","-","-"],["marwan","ramin","-","-"],["esmahil","kaka","-","-"],["hamastar","sarhad","-","-"],["ahmedzlatan","humar","-","-"],["azhdar","matin","-","-"]]
