@@ -70,34 +70,34 @@ const teamsImg = {
 const rounds = [
   // r1
 
-  [["meer","ramin","2","3"],["masud","kaka","0","1"],["ahmed88","sarhad","1","3"],["swra","humar","-","-"],["marwan","matin","5","2"],["esmahil","azhdar","1","1"],["hamastar","ahmedzlatan","5","1"]],
+  [["meer","ramin","2","3"],["masud","kaka","0","1"],["ahmed88","sarhad","1","3"],["swra","humar","3","0"],["marwan","matin","5","2"],["esmahil","azhdar","1","1"],["hamastar","ahmedzlatan","5","1"]],
 //r2
-    [["meer","masud","3","5"],["ahmed88","ramin","6","0"],["swra","kaka","1","2"],["marwan","sarhad","6","2"],["esmahil","humar","-","-"],["hamastar","matin","4","2"],["ahmedzlatan","azhdar","0","2"]],
+    [["meer","masud","3","5"],["ahmed88","ramin","6","0"],["swra","kaka","1","2"],["marwan","sarhad","6","2"],["esmahil","humar","3","0"],["hamastar","matin","4","2"],["ahmedzlatan","azhdar","0","2"]],
   //r3
-  [["meer","kaka","4","1"],["ramin","sarhad","-","-"],["masud","humar","-","-"],["ahmed88","matin","2","4"],["swra","azhdar","-","-"],["marwan","ahmedzlatan","-","-"],["esmahil","hamastar","4","4"]],
+  [["meer","kaka","4","1"],["ramin","sarhad","-","-"],["masud","humar","3","0"],["ahmed88","matin","2","4"],["swra","azhdar","-","-"],["marwan","ahmedzlatan","-","-"],["esmahil","hamastar","4","4"]],
   //r4
-  [["meer","sarhad","-","-"],["kaka","humar","-","-"],
+  [["meer","sarhad","-","-"],["kaka","humar","3","0"],
    ["ramin","matin","3","1"],["masud","azhdar","1","5"],["ahmed88","ahmedzlatan","5","3"],["swra","hamastar","-","-"],["marwan","esmahil","4","1"]],
   //r5
-  [["meer","humar","5","0"],["sarhad","matin","4","0"],["kaka","azhdar","4","1"],["ramin","ahmedzlatan","1","4"],["masud","hamastar","1","2"],["ahmed88","esmahil","2","1"],["swra","marwan","-","-"]],
+  [["meer","humar","3","0"],["sarhad","matin","4","0"],["kaka","azhdar","4","1"],["ramin","ahmedzlatan","1","4"],["masud","hamastar","1","2"],["ahmed88","esmahil","2","1"],["swra","marwan","-","-"]],
   //r6
-  [["meer","matin","2","5"],["humar","azhdar","-","-"],["sarhad","ahmedzlatan","5","3"],["kaka","hamastar","1","1"],["ramin","esmahil","3","4"],["masud","marwan","-","-"],["ahmed88","swra","0","3"]],
+  [["meer","matin","2","5"],["humar","azhdar","0","3"],["sarhad","ahmedzlatan","5","3"],["kaka","hamastar","1","1"],["ramin","esmahil","3","4"],["masud","marwan","-","-"],["ahmed88","swra","0","3"]],
   //r7
-  [["meer","azhdar","0","3"],["matin","ahmedzlatan","2","1"],["humar","hamastar","1","1"],["sarhad","esmahil","3","1"],["kaka","marwan","2","4"],
+  [["meer","azhdar","0","3"],["matin","ahmedzlatan","2","1"],["humar","hamastar","0","3"],["sarhad","esmahil","3","1"],["kaka","marwan","2","4"],
    ["ramin","swra","-","-"],["masud","ahmed88","1","2"]],
   //r8
-  [["meer","ahmedzlatan","3","1"],["azhdar","hamastar","1","3"],["matin","esmahil","3","3"],["humar","marwan","-","-"],["sarhad","swra","-","-"],["kaka","ahmed88","2","2"],["ramin","masud","-","-"]],
+  [["meer","ahmedzlatan","3","1"],["azhdar","hamastar","1","3"],["matin","esmahil","3","3"],["humar","marwan","0","3"],["sarhad","swra","-","-"],["kaka","ahmed88","2","2"],["ramin","masud","-","-"]],
   //r9
-  [["meer","hamastar","-","-"],["ahmedzlatan","esmahil","3","2"],["azhdar","marwan","0","1"],["matin","swra","-","-"],["humar","ahmed88","1","5"],["sarhad","masud","-","-"],["kaka","ramin","2","2"]],
+  [["meer","hamastar","-","-"],["ahmedzlatan","esmahil","3","2"],["azhdar","marwan","0","1"],["matin","swra","-","-"],["humar","ahmed88","0","3"],["sarhad","masud","-","-"],["kaka","ramin","2","2"]],
   //r10
-  [["meer","esmahil","4","4"],["hamastar","marwan","4","3"],["ahmedzlatan","swra","-","-"],["azhdar","ahmed88","2","3"],["matin","masud","-","-"],["humar","ramin","-","-"],["sarhad","kaka","0","1"]],
+  [["meer","esmahil","4","4"],["hamastar","marwan","4","3"],["ahmedzlatan","swra","-","-"],["azhdar","ahmed88","2","3"],["matin","masud","-","-"],["humar","ramin","0","3"],["sarhad","kaka","0","1"]],
   //r11
-  [["meer","marwan","0","4"],["esmahil","swra","1","3"],["hamastar","ahmed88","0","3"],["ahmedzlatan","masud","-","-"],["azhdar","ramin","4","5"],["matin","kaka","4","5"],["humar","sarhad","-","-"]],
+  [["meer","marwan","0","4"],["esmahil","swra","1","3"],["hamastar","ahmed88","0","3"],["ahmedzlatan","masud","-","-"],["azhdar","ramin","4","5"],["matin","kaka","4","5"],["humar","sarhad","0","3"]],
   //r12
-  [["meer","swra","-","-"],["marwan","ahmed88","5","2"],["esmahil","masud","-","-"],["hamastar","ramin","4","3"],["ahmedzlatan","kaka","-","-"],["azhdar","sarhad","4","1"],["matin","humar","-","-"]],
+  [["meer","swra","-","-"],["marwan","ahmed88","5","2"],["esmahil","masud","-","-"],["hamastar","ramin","4","3"],["ahmedzlatan","kaka","-","-"],["azhdar","sarhad","4","1"],["matin","humar","3","0"]],
   //r13
 
-  [["meer","ahmed88","3","3"],["swra","masud","-","-"],["marwan","ramin","4","2"],["esmahil","kaka","8","1"],["hamastar","sarhad","2","1"],["ahmedzlatan","humar","-","-"],["azhdar","matin","-","-"]]
+  [["meer","ahmed88","3","3"],["swra","masud","-","-"],["marwan","ramin","4","2"],["esmahil","kaka","8","1"],["hamastar","sarhad","2","1"],["ahmedzlatan","humar","3","0"],["azhdar","matin","-","-"]]
 ];
 
 // ======== GENERATE MATCHES ========
