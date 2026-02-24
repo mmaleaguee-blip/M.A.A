@@ -127,7 +127,7 @@ rounds.forEach((round,i)=>{
 // ======== KNOCKOUT SECTION ========
 const knockoutDiv=document.getElementById("knockout");
 knockoutDiv.innerHTML=`<div class="round-title">round 8</div>
-<img src="Final.jpeg" class="knockout-image">`;
+<img src="Final.JPEG" class="knockout-image">`;
 
 // ======== CALCULATE STANDINGS (FIXED) ========
 const standingsDiv=document.getElementById("standings");
